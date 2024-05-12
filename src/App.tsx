@@ -6,7 +6,7 @@ function App() {
     <div id="outer">
       <div id="screen">
         <div id="layer">
-          <textarea id="output"></textarea>
+          <textarea title="terminal" id="output"></textarea>
         </div>
         <div id="overlay"></div>
       </div>
