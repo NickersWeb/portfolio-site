@@ -227,7 +227,7 @@
 		var out = [
 		  'help                                         This command',
 		  'contact                                      How to contact author',
-		  'contact <key>                                Open page (example: `email` or `google+`)',
+		  'contact <key>                                Open page (example: `email`)',
 		  'clear/cls                                    Clears the screen',
 		  'ls                                           List current (or given) directory contents',
 		  'cd <dir>                                     Enter directory',
@@ -516,23 +516,44 @@
 	  window.onfocus = function() {
 		update();
 	  };
-  
-	  print("Stable-Tech <Terminal name> ............................................................\n\nTitle: Goodbye\n\n", true);
-  
-	  //print("------------------------------------------------------------------------------------------------------------------");
-	  print("To any pony who has left Stable Two in search of me\n", true);
-	  print("Please, go home.  I am doing what I have to do.\n", true);
-	  print("The Overmare understands, even if she can never agree, and I hope one day you will to.\n", true);
-	  print("I will not be back. \n", true);
-	  print("Do not look for me.\n", true);
-	  print("Do not endanger yourself further for my sake.\n", true);
-	  print("Please forgive me.\n", true);
-	  print("   -Velvet Remedy\n", true);
-	  print("\n\n\n", true);
-  
-	  print("\n\n\n\n\n\n", true);
-	  print("\n\n");
-  
+
+	  print('WELCOME TO NICKCO INDUSTRIES (TM) TERMLINK\n\n');
+	  print('>SET TERMINAL/INQUIRE\n\n');
+	  print('RX-9000\n\n');
+	  print('>SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F\n\n');
+	  print('>SET HALT RESTRART/MAINT\n\n');
+	  print('Initializing NickCo Industries (TM) MF Boot Agent v2.3.0\n');
+	  print('RETROS BIOS\n');
+	  print('RBIOS-4.02.08.00 52EE5.E7.E8\n');
+	  print('Copyright 2024-2026 NickCo Ind.\n');
+	  print('Uppermem: 1024 KB\n');
+	  print('Root (5A8)\n');
+	  print('Maintenance Mode\n\n');
+	  print('>RUN DEBUG/ACCOUNTS.F');
+	  setTimeout(()=>{
+		clear();
+		print(`	
+.............................................................................
+				
+@@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@   
+@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@  @@@@@@@@  
+@@!  @@@  @@!  @@@  @@!  @@@    @@!    @@!       @@!  @@@  @@!       @@!  @@!  @@@  
+!@!  @!@  !@!  @!@  !@!  @!@    !@!    !@!       !@!  @!@  !@!       !@!  !@!  @!@  
+@!@@!@!   @!@  !@!  @!@!!@!     @!!    @!!!:!    @!@  !@!  @!!       !!@  @!@  !@!  
+!!@!!!    !@!  !!!  !!@!@!      !!!    !!!!!:    !@!  !!!  !!!       !!!  !@!  !!!  
+!!:       !!:  !!!  !!: :!!     !!:    !!:       !!:  !!!  !!:       !!:  !!:  !!!  
+:!:       :!:  !:!  :!:  !:!    :!:    :!:       :!:  !:!   :!:      :!:  :!:  !:!  
+::       ::::: ::  ::   :::     ::     ::       ::::: ::   :: ::::   ::  ::::: ::  
+:         : :  :    :   : :     :      :         : :  :   : :: : :  :     : :  :   
+				
+-----------------------------------------------------------------------------
+ALL GRAPHICS ARE CREATED USING CSS, NO STATIC FILES OR IMAGES.
+-----------------------------------------------------------------------------
+				
+							
+TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.
+> `, true)
+	  }, 8 * 1000)
 	};
   
   })();
