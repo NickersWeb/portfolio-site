@@ -39,6 +39,73 @@
   var _history = [];
   var _hindex = -1;
   var _lhindex = -1;
+  var nickWebberCV = `
+Nicholas Webber | Fullstack Engineer
+Location: South Wales, (Remote)
+Email: nicholas.e.webber@hotmail.com
+
+Professional Profile
+________________
+
+Motivated engineer with a creative approach, adept at problem-solving, and passionate about innovative solutions.
+Technical competence and industry awareness drive the use of up-to-date programming foundations in agile development settings.
+
+Core Skills
+________________
+
+* HTML5, SASS/SCSS
+* React, TanStack
+* .NET Core
+* EF Core
+* C#
+* TypeScript
+* Azure Services
+
+Career Summary
+________________
+
+FullStack Engineer – Dstny Automate (Mar 2022 - Current)
+Technologies used: React, TypeScript, SASS/SCSS, .NET Core, EF Core, C#, Azure Services
+* Spearheaded the development of multiple SPA’s using React, incorporating efficient global state management for seamless user experiences.
+* Implemented Microservices architecture, optimizing system scalability and maintainability.
+* Successfully integrated APIs, enhancing the application's functionality and ensuring compatibility with diverse client requirements.
+* Proficiently managed OAuth and secured user authentication, contributing to the overall system's robust security measures.
+* Led the implementation of Automation Testing (TDD) practices, resulting in improved code reliability and development efficiency.
+
+Front End Engineer – Qunifi (May 2021 - Mar 2022)
+Technologies used: React, TypeScript, SASS/SCSS, .NET Core, EF Core, C#, Azure Services
+* Spearheaded the development of a Single Page Application (SPA) using React, incorporating efficient global state management for seamless user experiences.
+
+FullStack Developer – SourceCode Software Ltd (Jul 2020 - Feb 2021)
+Technologies used: React JS, .NET 5, Entity Framework, C#, SQL
+* Worked independently on multiple projects, demonstrating strong autonomy and adaptability within a small team.
+* Applied modern coding libraries for the frontend, ensuring a flexible and reusable codebase for evolving client requirements.
+* Successfully integrated third-party tools, such as EPO, OAuth, JWT, SMS & Email Services, to achieve project-specific requirements.
+* Demonstrated expertise in backend development, handling business logic, request processing, file management, and database operations.
+
+FullStack Developer – AMX Solutions Ltd (Jan 2017 - Jan 2020)
+Technologies used: .NET MVC, AngularJs - Angular 6, Jquery, SQL, C#
+* Played a key role in the enhancement and maintenance of legacy code through conversion, optimization, and refactoring strategies.
+* Established scalable automated testing practices for headless requests, macros, and performance tests, contributing to code quality improvements.
+* Ensured fluid layout practices and multi-browser/mobile support for frontend development, emphasizing accessibility certification.
+* Conducted in-depth database analysis, error handling, and implemented reusable code adhering to high coding standards.
+
+Education
+________________
+
+Level 4 Software and Web Development Apprenticeship (2018–August 2019)
+Level 4 Software and Web Development (Pass)
+
+Level 3 Software and Web Development Apprenticeship (2017–2018)
+Level 3 Software and Web Development (Distinct *)
+
+A Levels, Cabot Federation Sixth Form (2014 – 2016)
+A2 Media Studies (B)
+Level 3 Forensic Science (Applied Science) (Distinct *)
+A2 OCR Level 3 ICT Cambridge Technical (Merit)
+
+References available on request
+________________`;
 
   var _filetree = {
     CV: {
@@ -47,79 +114,7 @@
         NICKWEBBER: {
           type: "file",
           mime: "text/plain",
-          content: `
-		  Nicholas Webber | Fullstack Engineer
-		  Location: South Wales, (Remote) 
-		  Email: nicholas.e.webber@hotmail.com
-		   
-		  Professional Profile
-		  ________________
-		  Motivated engineer with a creative approach, adept at problem-solving, and passionate about innovative solutions. 
-		  Technical competence and industry awareness drive the use of up-to-date programming foundations in agile development settings.
-		  ________________
-
-		  Core Skills
-		  ________________
-		  * HTML5, SASS/SCSS
-		  * React, TanStack
-		  * .NET Core
-		  * EF Core
-		  * C# 
-		  * TypeScript
-		  * Azure Services
-		  ________________	  
-		  
-			  
-		  
-		  Career Summary
-		  ________________
-		  FullStack Engineer – Dstny Automate (Mar 2022 - Current)
-		  Technologies used: React, TypeScript, SASS/SCSS, .NET Core, EF Core, C#, Azure Services
-		  * Spearheaded the development of multiple SPA’s using React, incorporating efficient global state management for seamless user experiences.
-		  * Implemented Microservices architecture, optimizing system scalability and maintainability.
-		  * Successfully integrated APIs, enhancing the application's functionality and ensuring compatibility with diverse client requirements.
-		  * Proficiently managed OAuth and secured user authentication, contributing to the overall system's robust security measures.
-		  * Led the implementation of Automation Testing (TDD) practices, resulting in improved code reliability and development efficiency.
-		  
-		  Front End Engineer – Qunifi (May 2021 - Mar 2022)
-		  Technologies used: React, TypeScript, SASS/SCSS, .NET Core, EF Core, C#, Azure Services
-		  * Spearheaded the development of a Single Page Application (SPA) using React, incorporating efficient global state management for seamless user experiences.
-		  
-		  FullStack Developer – SourceCode Software Ltd (Jul 2020 - Feb 2021)
-		  Technologies used: React JS, .NET 5, Entity Framework, C#, SQL
-		  * Worked independently on multiple projects, demonstrating strong autonomy and adaptability within a small team.
-		  * Applied modern coding libraries for the frontend, ensuring a flexible and reusable codebase for evolving client requirements.
-		  * Successfully integrated third-party tools, such as EPO, OAuth, JWT, SMS & Email Services, to achieve project-specific requirements.
-		  * Demonstrated expertise in backend development, handling business logic, request processing, file management, and database operations.
-		  
-		  FullStack Developer – AMX Solutions Ltd (Jan 2017 - Jan 2020)
-		  Technologies used: .NET MVC, AngularJs - Angular 6, Jquery, SQL, C#
-		  * Played a key role in the enhancement and maintenance of legacy code through conversion, optimization, and refactoring strategies.
-		  * Established scalable automated testing practices for headless requests, macros, and performance tests, contributing to code quality improvements.
-		  * Ensured fluid layout practices and multi-browser/mobile support for frontend development, emphasizing accessibility certification.
-		  * Conducted in-depth database analysis, error handling, and implemented reusable code adhering to high coding standards.
-		  ________________
-		  
-		  
-		  
-		  Education
-		  ________________
-		  Level 4 Software and Web Development Apprenticeship (2018–August 2019) 
-		  Level 4 Software and Web Development (Pass)
-		  
-		  
-		  Level 3 Software and Web Development Apprenticeship (2017–2018) 
-		  Level 3 Software and Web Development (Distinct *)
-		  
-		  
-		  A Levels, Cabot Federation Sixth Form (2014 – 2016) 
-		  A2 Media Studies (B)
-		  Level 3 Forensic Science (Applied Science) (Distinct *)
-		  A2 OCR Level 3 ICT Cambridge Technical (Merit)
-		  
-		  
-		  References available on request
-		  ________________`,
+          content: nickWebberCV,
         },
       },
     },
@@ -468,10 +463,10 @@
   }
 
   function update() {
-    $output.focus();
-    var l = $output.value.length;
-    setSelectionRange($output, l, l);
-    $output.scrollTop = $output.scrollHeight;
+    //$output.focus();
+    // var l = $output.value.length;
+    // //setSelectionRange($output, l, l);
+    // $output.scrollTop = $output.scrollHeight;
   }
 
   function clear() {
@@ -624,32 +619,33 @@
     print("Root (5A8)\n");
     print("Maintenance Mode\n\n");
     print(">RUN DEBUG/ACCOUNTS.F");
+
     setTimeout(() => {
       clear();
       print(
-        `	
-.............................................................................
-				
-@@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@   
-@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@  @@@@@@@@  
-@@!  @@@  @@!  @@@  @@!  @@@    @@!    @@!       @@!  @@@  @@!       @@!  @@!  @@@  
-!@!  @!@  !@!  @!@  !@!  @!@    !@!    !@!       !@!  @!@  !@!       !@!  !@!  @!@  
-@!@@!@!   @!@  !@!  @!@!!@!     @!!    @!!!:!    @!@  !@!  @!!       !!@  @!@  !@!  
-!!@!!!    !@!  !!!  !!@!@!      !!!    !!!!!:    !@!  !!!  !!!       !!!  !@!  !!!  
-!!:       !!:  !!!  !!: :!!     !!:    !!:       !!:  !!!  !!:       !!:  !!:  !!!  
-:!:       :!:  !:!  :!:  !:!    :!:    :!:       :!:  !:!  :!:       :!:  :!:  !:!  
-::        ::::: ::  ::   :::    ::     ::        ::::: ::  :: ::::   ::   ::::: ::  
-:         : :  :    :   : :     :      :         : :  :   : :: : :   :     : :  :   
-				
------------------------------------------------------------------------------
+        `
+..................................................................................
+
+@@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@
+@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@  @@@@@@@@
+@@!  @@@  @@!  @@@  @@!  @@@    @@!    @@!       @@!  @@@  @@!       @@!  @@!  @@@
+!@!  @!@  !@!  @!@  !@!  @!@    !@!    !@!       !@!  @!@  !@!       !@!  !@!  @!@
+@!@@!@!   @!@  !@!  @!@!!@!     @!!    @!!!:!    @!@  !@!  @!!       !!@  @!@  !@!
+!!@!!!    !@!  !!!  !!@!@!      !!!    !!!!!:    !@!  !!!  !!!       !!!  !@!  !!!
+!!:       !!:  !!!  !!: :!!     !!:    !!:       !!:  !!!  !!:       !!:  !!:  !!!
+:!:       :!:  !:!  :!:  !:!    :!:    :!:       :!:  !:!  :!:       :!:  :!:  !:!
+::        ::::: ::  ::   :::    ::     ::        ::::: ::  :: ::::   ::   ::::: ::
+:         : :  :    :   : :     :      :         : :  :   : :: : :   :     : :  :
+
+----------------------------------------------------------------------------------
 ALL GRAPHICS ARE CREATED USING CSS, NO STATIC FILES OR IMAGES.
------------------------------------------------------------------------------
-				
-							
+----------------------------------------------------------------------------------
+
 TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.
 > `,
         true
       );
-    }, 1 * 1000);
+      print(nickWebberCV, true);
+    }, 0 * 1000);
   };
 })();

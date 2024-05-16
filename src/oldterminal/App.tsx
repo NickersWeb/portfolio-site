@@ -1,4 +1,5 @@
 import "./App.css";
+import "jquery.terminal/css/jquery.terminal.min.css";
 import "./terminal.js";
 
 function App() {
@@ -10,7 +11,6 @@ function App() {
         </div>
         <div id="overlay"></div>
       </div>
-      <div id="led"></div>
     </div>
   );
 }
