@@ -3,7 +3,7 @@ import JQTerminal from "jquery.terminal";
 
 JQTerminal(window, $);
 
-$(function ($, undefined) {
+$(function ($) {
   var scanlines = $(".scanlines");
   var tv = $(".tv");
   function exit() {
@@ -11,14 +11,45 @@ $(function ($, undefined) {
     term.disable();
   }
 
-  // ref: https://stackoverflow.com/q/67322922/387194
-  var __EVAL = (s) => eval(`void (__EVAL = ${__EVAL}); ${s}`);
-
   var term = $("#terminal").terminal(
     function (command, term) {
-      const { name, rest } = $.terminal.parse_command(command);
+      const cmd = $.terminal.parse_command(command);
+      const { name, rest } = cmd;
 
-      switch (name) {
+      switch (name.toLowerCase()) {
+        case "help":
+          var out = [
+            "help                                         This command",
+            "contact                                      How to contact author",
+            "clear/cls                                    Clears the screen",
+            "ls                                           List current (or given) directory contents",
+            "cd <dir>                                     Enter directory",
+            "cat <filename>                               Show file contents",
+            "sound [<volume 0-100>, <duration>, <freq>]   Generate a sound (WebKit only)",
+            "",
+          ];
+
+          term.echo(out.join("\n").toUpperCase());
+          break;
+        case "contact":
+          term.echo(
+            [
+              "Contact information:\n",
+              "Name:      Nick Webber",
+              "Email:     nicholas.e.webber@hotmail.com",
+              "Github:    https://github.com/NickersWeb",
+              "LinkedIn:  https://uk.linkedin.com/in/nick-w-6163b322a",
+              "YouTube:   None",
+              "Twitter:   None",
+            ]
+              .join("\n")
+              .toUpperCase()
+          );
+          break;
+        case "clear":
+        case "cls":
+          term.clear();
+          break;
         case "exit":
           exit();
           break;
@@ -26,18 +57,7 @@ $(function ($, undefined) {
           term.echo(rest);
           break;
         default:
-          try {
-            var result = __EVAL(command);
-            if (result && result instanceof $.fn.init) {
-              term.echo("<#jQuery>");
-            } else if (result && typeof result === "object") {
-              tree(result);
-            } else if (result !== undefined) {
-              term.echo(new String(result));
-            }
-          } catch (e) {
-            term.error(new String(e));
-          }
+          term.error(`Command: ${name} does not exist.`);
           break;
       }
     },
@@ -46,8 +66,6 @@ $(function ($, undefined) {
       name: "js_demo",
       onResize: set_size,
       exit: false,
-      // detect iframe codepen preview
-      enabled: $("body").attr("onload") === undefined,
       onInit: async function (t) {
         set_size();
         await typeEffect(t, "WELCOME TO NICKCO INDUSTRIES (TM) TERMLINK\n\n");
@@ -129,9 +147,5 @@ TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
     scanlines[0].style.setProperty("--time", time);
     tv[0].style.setProperty("--width", width);
     tv[0].style.setProperty("--height", height);
-  }
-
-  function tree(obj) {
-    term.echo(treeify.asTree(obj, true, true));
   }
 });
