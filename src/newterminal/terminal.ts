@@ -2,6 +2,20 @@ import $ from "jquery";
 import JQTerminal from "jquery.terminal";
 
 JQTerminal(window, $);
+interface FileTree {
+  [key: string]: Directory | File;
+}
+
+interface Directory {
+  type: "dir";
+  files: FileTree;
+}
+
+interface File {
+  type: "file";
+  mime: string;
+  content: string;
+}
 
 $(function ($) {
   var _cwd = "/";
@@ -11,7 +25,7 @@ $(function ($) {
     $(".tv").addClass("collapse");
     term.disable();
   }
-  const _filetree = {
+  const _filetree: FileTree = {
     CV: {
       type: "dir",
       files: {
@@ -116,9 +130,10 @@ ________________`,
       },
     },
   };
-  const realpath = (path) => {
+
+  const realpath = (path: string) => {
     var parts = path.split(/\//);
-    var path = [];
+    var newPath: string[] = [];
     for (var i in parts) {
       if (parts.hasOwnProperty(i)) {
         if (parts[i] == ".") {
@@ -127,34 +142,40 @@ ________________`,
 
         if (parts[i] == "..") {
           if (path.length) {
-            path.pop();
+            newPath.pop();
           }
         } else {
-          path.push(parts[i]);
+          newPath.push(parts[i]);
         }
       }
     }
 
-    return path.join("/");
+    return newPath.join("/");
   };
 
-  const parsepath = (p) => {
+  const parsepath = (p: string) => {
     var dir = (p.match(/^\//) ? p : _cwd + "/" + p).replace(/\/+/g, "/");
     return realpath(dir) || "/";
   };
 
-  const getiter = (path) => {
+  const getiter = (path: string) => {
     var parts = (path.replace(/^\//, "") || "/").split("/");
     var iter = null;
 
     var last = _filetree;
     while (parts.length) {
       var i = parts.shift();
+
+      if (!i) {
+        return;
+      }
+
       if (!last[i]) break;
 
       if (!parts.length) {
         iter = last[i];
       } else {
+        //@ts-ignore
         last = last[i].type == "dir" ? last[i].files : {};
       }
     }
@@ -173,8 +194,8 @@ ________________`,
   //   return format.replace(sprintfRegex, sprintf);
   // };
 
-  const padRight = (str, l, c) => {
-    return str + Array(l - str.length + 1).join(c || " ");
+  const padRight = (str: string, l: number) => {
+    return str + Array(l - str.length + 1).join(" ");
   };
 
   var term = $("#terminal").terminal(
@@ -210,6 +231,7 @@ ________________`,
             return;
           }
 
+          //@ts-ignore
           term.echo(iter.content);
           break;
         case "cd":
@@ -230,7 +252,7 @@ ________________`,
         case "ls":
           const dir = parsepath(rest || _cwd);
 
-          var out = [];
+          var out: string[] = [];
           var iter = getiter(dir);
 
           var p;
@@ -297,7 +319,8 @@ ________________`,
       name: "js_demo",
       onResize: set_size,
       exit: false,
-      onInit: async function (t) {
+      //@ts-ignore
+      onInit: async (t) => {
         set_size();
 
         //https://terminal.jcubic.pl/examples.php#user-typing
@@ -344,13 +367,6 @@ NO BUGS WERE HARMED IN THE CREATION OF THIS SITE.
 TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
         }, 750);
       },
-      onClear: function () {
-        console.log(this.find("video").length);
-        this.find("video").map(function () {
-          console.log(this.src);
-          return this.src;
-        });
-      },
       prompt: "> ",
     }
   );
@@ -360,9 +376,13 @@ TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
     term.find(".cursor").addClass("blink");
   }
 
-  async function typeEffect(term, message, index = 0) {
+  async function typeEffect(
+    term: JQueryTerminal<HTMLElement>,
+    message: string,
+    index = 0
+  ) {
     if (index < message.length) {
-      await term.echo(message[index], { newline: false }); // Insert the next character
+      term.echo(message[index], { newline: false }); // Insert the next character
 
       return new Promise((res) => {
         setTimeout(() => {
@@ -376,9 +396,11 @@ TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
     // for window height of 170 it should be 2s
     var height = $(window).height();
     var width = $(window).width();
-    var time = (height * 2) / 170;
-    scanlines[0].style.setProperty("--time", time);
-    tv[0].style.setProperty("--width", width);
-    tv[0].style.setProperty("--height", height);
+    if (height && width) {
+      var time = (height * 2) / 170;
+      scanlines[0].style.setProperty("--time", time.toString());
+      tv[0].style.setProperty("--width", width.toString());
+      tv[0].style.setProperty("--height", height.toString());
+    }
   }
 });

@@ -1,6 +1,6 @@
 import "jquery.terminal/css/jquery.terminal.min.css";
 import "./App.css";
-import "./terminal.js";
+import "./terminal";
 
 function App() {
   return (
