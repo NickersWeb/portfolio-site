@@ -1,3 +1,4 @@
+import $ from "jquery";
 import { useEffect, useRef, useState } from "react";
 import JQTerminal from "jquery.terminal";
 import "jquery.terminal/css/jquery.terminal.min.css";

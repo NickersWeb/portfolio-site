@@ -19,6 +19,7 @@ interface File {
 
 function App() {
   let _cwd = "/";
+  let init = false;
 
   const typeEffect = async (
     term: JQueryTerminal<HTMLElement>,
@@ -150,6 +151,55 @@ function App() {
         .join("\n")
         .toUpperCase()
     );
+  };
+
+  const intro = async (term: JQueryTerminal<HTMLElement>) => {
+    term.clear();
+    setSize();
+
+    //https://terminal.jcubic.pl/examples.php#user-typing
+    await typeEffect(term, "WELCOME TO NICKCO INDUSTRIES (TM) TERMLINK\n\n");
+    await typeEffect(term, ">SET TERMINAL/INQUIRE\n\n");
+    await typeEffect(term, "RX-9000\n\n");
+    await typeEffect(term, ">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F\n\n");
+    await typeEffect(term, ">SET HALT RESTART/MAINT\n\n");
+    await typeEffect(
+      term,
+      "Initializing NickCo Industries (TM) MF Boot Agent v2.3.0\n"
+    );
+    await typeEffect(term, "RETROS BIOS\n");
+    await typeEffect(term, "RBIOS-4.02.08.00 52EE5.E7.E8\n");
+    await typeEffect(
+      term,
+      `Copyright 1998-${new Date().getFullYear()} NickCo Ind.\n`
+    );
+    await typeEffect(term, "Uppermem: 1024 KB\n");
+    await typeEffect(term, "Root (5A8)\n");
+    await typeEffect(term, "Maintenance Mode\n\n");
+    await typeEffect(term, ">RUN DEBUG/ACCOUNTS.F");
+
+    setTimeout(() => {
+      term.clear();
+      term.echo(`
+..................................................................................
+
+@@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@
+@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@  @@@@@@@@
+@@!  @@@  @@!  @@@  @@!  @@@    @@!    @@!       @@!  @@@  @@!       @@!  @@!  @@@
+!@!  @!@  !@!  @!@  !@!  @!@    !@!    !@!       !@!  @!@  !@!       !@!  !@!  @!@
+@!@@!@!   @!@  !@!  @!@!!@!     @!!    @!!!:!    @!@  !@!  @!!       !!@  @!@  !@!
+!!@!!!    !@!  !!!  !!@!@!      !!!    !!!!!:    !@!  !!!  !!!       !!!  !@!  !!!
+!!:       !!:  !!!  !!: :!!     !!:    !!:       !!:  !!!  !!:       !!:  !!:  !!!
+:!:       :!:  !:!  :!:  !:!    :!:    :!:       :!:  !:!  :!:       :!:  :!:  !:!
+::        ::::: ::  ::   :::    ::     ::        ::::: ::  :: ::::   ::   ::::: ::
+:         : :  :    :   : :     :      :         : :  :   : :: : :   :     : :  :
+
+----------------------------------------------------------------------------------
+NO BUGS WERE HARMED IN THE CREATION OF THIS SITE.
+----------------------------------------------------------------------------------
+
+TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
+    }, 750);
   };
 
   const _filetree: FileTree = {
@@ -316,7 +366,7 @@ ________________`,
 
   return (
     <Terminal
-      interpreter={(command, term) => {
+      interpreter={async (command, term) => {
         const cmd = $.terminal.parse_command(command);
         const { name, rest } = cmd;
 
@@ -346,64 +396,24 @@ ________________`,
           case "echo":
             term.echo(rest);
             break;
+          case "y":
+            if (init) {
+              return;
+            }
+            await intro(term);
+
+            init = true;
+            break;
           default:
             term.error(`Command: ${name} does not exist.`);
             break;
         }
       }}
       options={{
-        greetings: "",
-        name: "js_demo",
+        greetings: "ENTER? (Y)",
+        //@ts-ignore
         onResize: setSize,
         exit: false,
-        //@ts-ignore
-        onInit: async (t) => {
-          setSize();
-
-          //https://terminal.jcubic.pl/examples.php#user-typing
-          await typeEffect(t, "WELCOME TO NICKCO INDUSTRIES (TM) TERMLINK\n\n");
-          await typeEffect(t, ">SET TERMINAL/INQUIRE\n\n");
-          await typeEffect(t, "RX-9000\n\n");
-          await typeEffect(t, ">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F\n\n");
-          await typeEffect(t, ">SET HALT RESTART/MAINT\n\n");
-          await typeEffect(
-            t,
-            "Initializing NickCo Industries (TM) MF Boot Agent v2.3.0\n"
-          );
-          await typeEffect(t, "RETROS BIOS\n");
-          await typeEffect(t, "RBIOS-4.02.08.00 52EE5.E7.E8\n");
-          await typeEffect(
-            t,
-            `Copyright 1998-${new Date().getFullYear()} NickCo Ind.\n`
-          );
-          await typeEffect(t, "Uppermem: 1024 KB\n");
-          await typeEffect(t, "Root (5A8)\n");
-          await typeEffect(t, "Maintenance Mode\n\n");
-          await typeEffect(t, ">RUN DEBUG/ACCOUNTS.F");
-
-          setTimeout(() => {
-            t.clear();
-            t.echo(`
-..................................................................................
-
-@@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@
-@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@  @@@@@@@@
-@@!  @@@  @@!  @@@  @@!  @@@    @@!    @@!       @@!  @@@  @@!       @@!  @@!  @@@
-!@!  @!@  !@!  @!@  !@!  @!@    !@!    !@!       !@!  @!@  !@!       !@!  !@!  @!@
-@!@@!@!   @!@  !@!  @!@!!@!     @!!    @!!!:!    @!@  !@!  @!!       !!@  @!@  !@!
-!!@!!!    !@!  !!!  !!@!@!      !!!    !!!!!:    !@!  !!!  !!!       !!!  !@!  !!!
-!!:       !!:  !!!  !!: :!!     !!:    !!:       !!:  !!!  !!:       !!:  !!:  !!!
-:!:       :!:  !:!  :!:  !:!    :!:    :!:       :!:  !:!  :!:       :!:  :!:  !:!
-::        ::::: ::  ::   :::    ::     ::        ::::: ::  :: ::::   ::   ::::: ::
-:         : :  :    :   : :     :      :         : :  :   : :: : :   :     : :  :
-
-----------------------------------------------------------------------------------
-NO BUGS WERE HARMED IN THE CREATION OF THIS SITE.
-----------------------------------------------------------------------------------
-
-TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
-          }, 750);
-        },
         prompt: "> ",
       }}
     />
