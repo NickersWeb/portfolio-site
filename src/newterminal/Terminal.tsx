@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import $ from "jquery";
 import JQTerminal from "jquery.terminal";
 import "jquery.terminal/css/jquery.terminal.min.css";
-import "./terminal.css";
+import "./Terminal.css";
 
 interface TerminalProps {
   interpreter?: TypeOrArray<JQueryTerminal.Interpreter>;
