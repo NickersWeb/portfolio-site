@@ -33,72 +33,62 @@ $(function ($) {
           type: "file",
           mime: "text/plain",
           content: `
-Nicholas Webber | Fullstack Engineer
-Location: South Wales, (Remote)
+Nicholas Webber
+Location: South Wales (Remote)
 Email: nicholas.e.webber@hotmail.com
-
 Professional Profile
-________________
-
-Motivated engineer with a creative approach, adept at problem-solving, and passionate about innovative solutions.
-Technical competence and industry awareness drive the use of up-to-date programming foundations in agile development settings.
-
+Motivated and innovative Fullstack Engineer with a focus on front-end web development. Adept at leading teams to deliver high-quality, scalable, and maintainable solutions. Expertise in the latest front-end technologies, automated testing, and best practices. Passionate about creating efficient and consistent development processes and delivering clear, comprehensive documentation.
 Core Skills
-________________
-
-* HTML5, SASS/SCSS
-* React, TanStack
-* .NET Core
-* EF Core
-* C#
-* TypeScript
-* Azure Services
-
+- Front-End Technologies: HTML5, SASS/SCSS, Bootstrap, TailWind, React, TanStack, Vite, Vitest and Shadcn
+- Back-End Technologies: .NET Core, EF Core, C#, SQL
+- Cloud Services: Agnostic platform services
+- Development Practices: Agile Development, onion architecture and microservices 
+- DevOps: Terraform (Azure), Yaml (build/deploy/etc) pipelines (Azure DevOps)
+- Automation Testing (TDD): Vitest, React-testing-library, MSW and Efate
+- Soft Skills: Team Leadership, Problem-Solving, Communication, Documentation
 Career Summary
-________________
-
-FullStack Engineer – Dstny Automate (Mar 2022 - Current)
-Technologies used: React, TypeScript, SASS/SCSS, .NET Core, EF Core, C#, Azure Services
-* Spearheaded the development of multiple SPA’s using React, incorporating efficient global state management for seamless user experiences.
-* Implemented Microservices architecture, optimizing system scalability and maintainability.
-* Successfully integrated APIs, enhancing the application's functionality and ensuring compatibility with diverse client requirements.
-* Proficiently managed OAuth and secured user authentication, contributing to the overall system's robust security measures.
-* Led the implementation of Automation Testing (TDD) practices, resulting in improved code reliability and development efficiency.
-
-Front End Engineer – Qunifi (May 2021 - Mar 2022)
-Technologies used: React, TypeScript, SASS/SCSS, .NET Core, EF Core, C#, Azure Services
-* Spearheaded the development of a Single Page Application (SPA) using React, incorporating efficient global state management for seamless user experiences.
-
-FullStack Developer – SourceCode Software Ltd (Jul 2020 - Feb 2021)
-Technologies used: React JS, .NET 5, Entity Framework, C#, SQL
-* Worked independently on multiple projects, demonstrating strong autonomy and adaptability within a small team.
-* Applied modern coding libraries for the frontend, ensuring a flexible and reusable codebase for evolving client requirements.
-* Successfully integrated third-party tools, such as EPO, OAuth, JWT, SMS & Email Services, to achieve project-specific requirements.
-* Demonstrated expertise in backend development, handling business logic, request processing, file management, and database operations.
-
-FullStack Developer – AMX Solutions Ltd (Jan 2017 - Jan 2020)
-Technologies used: .NET MVC, AngularJs - Angular 6, Jquery, SQL, C#
-* Played a key role in the enhancement and maintenance of legacy code through conversion, optimization, and refactoring strategies.
-* Established scalable automated testing practices for headless requests, macros, and performance tests, contributing to code quality improvements.
-* Ensured fluid layout practices and multi-browser/mobile support for frontend development, emphasizing accessibility certification.
-* Conducted in-depth database analysis, error handling, and implemented reusable code adhering to high coding standards.
-
+FullStack Engineer
+Dstny (D4SP) | Mar 2022 - Present
+- Lead the development of a mono-repo front-end web application, enabling multiple apps to share logic and components from internal libraries. Allowing for a highly customizable and structured solution.
+- Lead front-end web automation testing using popular/performant libraries and frameworks. Enhancing the test coverage and structure for engineers to create tests with minimal effort.
+- Lead the API client build/deployment solution, facilitating simple API integration for internal members and external customers.
+- Served as the primary contact for all front-end bugs and FE support issues or features, ensuring timely resolution.
+- Collaborated with designers on application mockups, providing feedback on design feasibility and engineering impact.
+- Assisted the product team in drafting/refining detailed epics and user stories for front-end features, focusing on clarity and completeness.
+- Advocate for and implement accessibility checks within front-end automation tests. To ensure web applications are accessible. 
+Front End Engineer
+Qunifi | May 2021 - Mar 2022
+- Spearheaded the development of a Single Page Application (SPA) using React, incorporating efficient global state management for seamless user experiences.
+FullStack Developer
+SourceCode Software Ltd | Jul 2020 - Feb 2021
+- Independently managed multiple projects, demonstrating strong autonomy and adaptability.
+- Utilized modern coding libraries to ensure a flexible and reusable frontend codebase.
+- Integrated third-party tools like EPO, OAuth, JWT, and SMS & Email services to meet project requirements.
+- Handled backend development, including business logic, request processing, file management, and database operations.
+FullStack Developer
+AMX Solutions Ltd | Jan 2017 - Jan 2020
+- Enhanced and maintained legacy code through conversion, optimization, and refactoring.
+- Established scalable automated testing practices for headless requests, macros, and performance tests.
+- Ensured multi-browser and mobile support for frontend development, emphasizing accessibility.
+- Conducted in-depth database analysis and error handling, implementing high coding standards.
 Education
-________________
+Level 4 Software and Web Development Apprenticeship
+Completed: August 2019
 
-Level 4 Software and Web Development Apprenticeship (2018–August 2019)
-Level 4 Software and Web Development (Pass)
+Level 3 Software and Web Development Apprenticeship
+Completed: 2018
 
-Level 3 Software and Web Development Apprenticeship (2017–2018)
-Level 3 Software and Web Development (Distinct *)
-
-A Levels, Cabot Federation Sixth Form (2014 – 2016)
-A2 Media Studies (B)
-Level 3 Forensic Science (Applied Science) (Distinct *)
-A2 OCR Level 3 ICT Cambridge Technical (Merit)
-
-References available on request
-________________`,
+A Levels
+Cabot Federation Sixth Form | 2014 - 2016
+- A2 Media Studies (B)
+- Level 3 Forensic Science (Applied Science) (Distinction *)
+- A2 OCR Level 3 ICT Cambridge Technical (Merit)
+Certifications
+- Front-End Automation Testing Courses
+- Front-End Libraries and Web Styling Courses (Vitest, React, SASS/SCSS)
+References
+Available upon request
+`,
         },
       },
     },
@@ -291,7 +281,7 @@ ________________`,
               "Name:      Nick Webber",
               "Email:     nicholas.e.webber@hotmail.com",
               "Github:    https://github.com/NickersWeb",
-              "LinkedIn:  https://uk.linkedin.com/in/nick-w-6163b322a",
+              "LinkedIn:  https://linkedin.com/in/nick-w-6163b322a",
               "YouTube:   None",
               "Twitter:   None",
             ]
