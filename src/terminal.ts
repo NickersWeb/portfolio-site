@@ -34,61 +34,113 @@ $(function ($) {
           mime: "text/plain",
           content: `
 Nicholas Webber
-Location: South Wales (Remote)
-Email: nicholas.e.webber@hotmail.com
+================
+
+📍 South West, UK
+📧 nicholas.e.webber@hotmail.com
+Seeking: Software Engineer / Technical Position
+
+------------------------------------------------------------
 Professional Profile
-Motivated and innovative Fullstack Engineer with a focus on front-end web development. Adept at leading teams to deliver high-quality, scalable, and maintainable solutions. Expertise in the latest front-end technologies, automated testing, and best practices. Passionate about creating efficient and consistent development processes and delivering clear, comprehensive documentation.
+------------------------------------------------------------
+Motivated and innovative full-stack engineer with a focus on front-end web development. 
+Adept at leading teams to deliver high-quality, scalable, and maintainable solutions. 
+Expertise in the latest front-end technologies, automated testing, and best practices. 
+Passionate about creating efficient and consistent development processes and delivering clear, comprehensive documentation.
+
+------------------------------------------------------------
 Core Skills
-- Front-End Technologies: HTML5, SASS/SCSS, Bootstrap, TailWind, React, TanStack, Vite, Vitest and Shadcn
-- Back-End Technologies: .NET Core, EF Core, C#, SQL
-- Cloud Services: Agnostic platform services
-- Development Practices: Agile Development, onion architecture and microservices 
-- DevOps: Terraform (Azure), Yaml (build/deploy/etc) pipelines (Azure DevOps)
-- Automation Testing (TDD): Vitest, React-testing-library, MSW and Efate
-- Soft Skills: Team Leadership, Problem-Solving, Communication, Documentation
-Career Summary
+------------------------------------------------------------
+Front-End:       HTML5, TypeScript, JavaScript, SASS/SCSS, Bootstrap, TailWind, React, TanStack, Vite, Vitest
+Back-End:        .NET Ecosystem, C#, SQL
+Cloud Services:  Agnostic platform services (e.g., Azure)
+Dev Practices:   Agile Development, Onion Architecture, Microservices
+DevOps:          Terraform (Azure), Yaml (CI/CD integrations), Pipelines (Azure DevOps), Node CLIs
+Testing (TDD):   Vitest, React Testing Library, Jest, MSW, NUnit
+Soft Skills:     Team Leadership, Support, Problem-Solving, Communication, Technical Documentation
+
+------------------------------------------------------------
+Professional Experience
+------------------------------------------------------------
+
+Front End Technical Lead
+Dstny (D4SP) | Oct 2024 – Mar 2025
+- Led engineering and development of a platform-agnostic, framework-agnostic internal component library.
+- Designed atomic, reusable components to integrate into diverse ecosystems.
+- Improved developer experience with technical documentation and CLIs.
+- Authored comprehensive documentation for adoption and implementation.
+- Collaborated with design team to align vision and implementation.
+- Promoted reusable, consistent code practices across teams.
+
 FullStack Engineer
-Dstny (D4SP) | Mar 2022 - Present
-- Lead the development of a mono-repo front-end web application, enabling multiple apps to share logic and components from internal libraries. Allowing for a highly customizable and structured solution.
-- Lead front-end web automation testing using popular/performant libraries and frameworks. Enhancing the test coverage and structure for engineers to create tests with minimal effort.
-- Lead the API client build/deployment solution, facilitating simple API integration for internal members and external customers.
-- Served as the primary contact for all front-end bugs and FE support issues or features, ensuring timely resolution.
-- Collaborated with designers on application mockups, providing feedback on design feasibility and engineering impact.
-- Assisted the product team in drafting/refining detailed epics and user stories for front-end features, focusing on clarity and completeness.
-- Advocate for and implement accessibility checks within front-end automation tests. To ensure web applications are accessible. 
-Front End Engineer
-Qunifi | May 2021 - Mar 2022
-- Spearheaded the development of a Single Page Application (SPA) using React, incorporating efficient global state management for seamless user experiences.
-FullStack Developer
-SourceCode Software Ltd | Jul 2020 - Feb 2021
-- Independently managed multiple projects, demonstrating strong autonomy and adaptability.
-- Utilized modern coding libraries to ensure a flexible and reusable frontend codebase.
-- Integrated third-party tools like EPO, OAuth, JWT, and SMS & Email services to meet project requirements.
-- Handled backend development, including business logic, request processing, file management, and database operations.
-FullStack Developer
-AMX Solutions Ltd | Jan 2017 - Jan 2020
-- Enhanced and maintained legacy code through conversion, optimization, and refactoring.
-- Established scalable automated testing practices for headless requests, macros, and performance tests.
-- Ensured multi-browser and mobile support for frontend development, emphasizing accessibility.
-- Conducted in-depth database analysis and error handling, implementing high coding standards.
-Education
-Level 4 Software and Web Development Apprenticeship
-Completed: August 2019
+Dstny (D4SP) | Mar 2022 – Mar 2025
+- Led development of a monorepo web app architecture sharing logic/components.
+- Pioneered automated front-end testing, increasing coverage and ease of test writing.
+- Developed API client build and deployment solution for internal and external use.
+- Primary contact for front-end bugs, support, and features.
+- Worked with designers on mockups and technical feedback.
+- Supported product team by refining epics and user stories.
+- Implemented accessibility checks in front-end tests.
 
-Level 3 Software and Web Development Apprenticeship
-Completed: 2018
+Front-End Engineer
+Qunifi | May 2021 – Mar 2022
+- Developed a React SPA with Redux for state management and performance optimization.
 
-A Levels
-Cabot Federation Sixth Form | 2014 - 2016
+Full-Stack Developer
+SourceCode Software Ltd | Jul 2020 – Feb 2021
+- Managed multiple projects independently.
+- Built reusable front-end using modern libraries.
+- Integrated EPO, OAuth, JWT, and messaging services.
+- Developed back-end logic, request handling, file, and database operations.
+
+Full-Stack Developer
+AMX Solutions Ltd | Jan 2017 – Jan 2020
+- Refactored and optimized legacy code.
+- Established scalable automated testing for various request types.
+- Ensured browser/mobile compatibility with a focus on accessibility.
+- Performed database analysis and robust error handling.
+
+------------------------------------------------------------
+Education & Training
+------------------------------------------------------------
+
+Software & Web Development Apprenticeship (Level 4 Diploma)
+- Grade: Merit (Completed: August 2019)
+
+Software & Web Development Apprenticeship (Level 3 Diploma)
+- Grade: Distinction Star (Completed: 2018)
+
+A Levels - Cabot Federation Sixth Form | 2014–2016
 - A2 Media Studies (B)
-- Level 3 Forensic Science (Applied Science) (Distinction *)
-- A2 OCR Level 3 ICT Cambridge Technical (Merit)
-Certifications
-- Front-End Automation Testing Courses
-- Front-End Libraries and Web Styling Courses (Vitest, React, SASS/SCSS)
+- Level 3 Forensic Science (Distinction*)
+- A2 OCR ICT Cambridge Technical (Merit)
+
+GCSE - King’s Oak Academy | 2007–2014
+- Maths, Science & English (C)
+
+------------------------------------------------------------
+Additional Qualifications
+------------------------------------------------------------
+
+Programming Courses:
+- React Native – The Practical Guide (2025) – Maximilian Schwarzmüller
+- React – The Complete Guide (2025) – Maximilian Schwarzmüller
+- Complete Node.js Developer Course – Rob Percival
+- The Complete Angular Course – Mosh Hamedani
+- Entity Framework in Depth – Mosh Hamedani
+- C# Intermediate – Mosh Hamedani
+- Complete C# Unity Game Developer 2D – GameDev.tv
+- Unreal Engine 2D/2.5D Game Dev – Cobra Code
+- React Testing Library with Jest/Vitest – Bonnie Schulkin
+- Advanced CSS and Sass – Jonas Schmedtmann
+
+------------------------------------------------------------
 References
+------------------------------------------------------------
+
 Available upon request
-`,
+
+          `,
         },
       },
     },
@@ -259,8 +311,7 @@ Available upon request
                 );
               } else {
                 out.push(
-                  `${padRight(i, 20)} ${padRight(p.mime, 20)} ${
-                    p.content.length
+                  `${padRight(i, 20)} ${padRight(p.mime, 20)} ${p.content.length
                   }`
                 );
                 total += p.content.length;
@@ -277,16 +328,17 @@ Available upon request
         case "contact":
           term.echo(
             [
-              "Contact information:\n",
+              "Contact information:",
               "Name:      Nick Webber",
               "Email:     nicholas.e.webber@hotmail.com",
-              "Github:    https://github.com/NickersWeb",
-              "LinkedIn:  https://linkedin.com/in/nick-w-6163b322a",
+              'Github:    <a href="https://www.github.com/NickersWeb/" target="_blank">www.github.com/NickersWeb</a>',
+              'LinkedIn:  <a href="https://www.linkedin.com/in/nick-w-6163b322a/" target="_blank">www.linkedin.com/in/nick-w-6163b322a</a>',
               "YouTube:   None",
               "Twitter:   None",
             ]
-              .join("\n")
-              .toUpperCase()
+              .join("<br/>"), {
+            raw: true
+          }
           );
           break;
         case "clear":
@@ -314,29 +366,8 @@ Available upon request
         set_size();
 
         //https://terminal.jcubic.pl/examples.php#user-typing
-        await typeEffect(t, "WELCOME TO NICKCO INDUSTRIES (TM) TERMLINK\n\n");
-        await typeEffect(t, ">SET TERMINAL/INQUIRE\n\n");
-        await typeEffect(t, "RX-9000\n\n");
-        await typeEffect(t, ">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F\n\n");
-        await typeEffect(t, ">SET HALT RESTART/MAINT\n\n");
-        await typeEffect(
-          t,
-          "Initializing NickCo Industries (TM) MF Boot Agent v2.3.0\n"
-        );
-        await typeEffect(t, "RETROS BIOS\n");
-        await typeEffect(t, "RBIOS-4.02.08.00 52EE5.E7.E8\n");
-        await typeEffect(
-          t,
-          `Copyright 1998-${new Date().getFullYear()} NickCo Ind.\n`
-        );
-        await typeEffect(t, "Uppermem: 1024 KB\n");
-        await typeEffect(t, "Root (5A8)\n");
-        await typeEffect(t, "Maintenance Mode\n\n");
-        await typeEffect(t, ">RUN DEBUG/ACCOUNTS.F");
-
-        setTimeout(() => {
-          t.clear();
-          t.echo(`
+        t.clear();
+        t.echo(`
 ..................................................................................
 
 @@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@
@@ -355,7 +386,7 @@ NO BUGS WERE HARMED IN THE CREATION OF THIS SITE.
 ----------------------------------------------------------------------------------
 
 TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
-        }, 750);
+
       },
       prompt: "> ",
     }
