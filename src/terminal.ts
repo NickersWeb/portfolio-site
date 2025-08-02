@@ -397,21 +397,21 @@ TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
     term.find(".cursor").addClass("blink");
   }
 
-  async function typeEffect(
-    term: JQueryTerminal<HTMLElement>,
-    message: string,
-    index = 0
-  ) {
-    if (index < message.length) {
-      term.echo(message[index], { newline: false }); // Insert the next character
+  // async function typeEffect(
+  //   term: JQueryTerminal<HTMLElement>,
+  //   message: string,
+  //   index = 0
+  // ) {
+  //   if (index < message.length) {
+  //     term.echo(message[index], { newline: false }); // Insert the next character
 
-      return new Promise((res) => {
-        setTimeout(() => {
-          res(typeEffect(term, message, index + 1)); // Call the function again with the next index
-        }, 25); // Adjust the delay as needed (in milliseconds)
-      });
-    }
-  }
+  //     return new Promise((res) => {
+  //       setTimeout(() => {
+  //         res(typeEffect(term, message, index + 1)); // Call the function again with the next index
+  //       }, 25); // Adjust the delay as needed (in milliseconds)
+  //     });
+  //   }
+  // }
 
   function set_size() {
     // for window height of 170 it should be 2s
