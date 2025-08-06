@@ -368,6 +368,7 @@ Available upon request
         //https://terminal.jcubic.pl/examples.php#user-typing
         t.clear();
         t.echo(`
+          <pre>
 ..................................................................................
 
 @@@@@@@    @@@@@@   @@@@@@@   @@@@@@@  @@@@@@@@   @@@@@@   @@@       @@@   @@@@@@
@@ -384,10 +385,11 @@ Available upon request
 ----------------------------------------------------------------------------------
 NO BUGS WERE HARMED IN THE CREATION OF THIS SITE.
 ----------------------------------------------------------------------------------
-
+</pre>
 TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
 
       },
+      raw: true,
       prompt: "> ",
     }
   );
