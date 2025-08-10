@@ -386,10 +386,9 @@ Available upon request
 NO BUGS WERE HARMED IN THE CREATION OF THIS SITE.
 ----------------------------------------------------------------------------------
 </pre>
-TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`);
+TYPE 'HELP' FOR A LIST OF AVAILABLE COMMANDS.`, { raw: true });
 
       },
-      raw: true,
       prompt: "> ",
     }
   );
