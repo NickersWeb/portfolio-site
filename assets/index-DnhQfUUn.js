@@ -186,7 +186,7 @@ Full-Stack Developer
 SourceCode Software Ltd | Jul 2020 – Feb 2021
 - Managed multiple projects independently.
 - Built reusable front-end using modern libraries.
-- Integrated EPO, OAuth, JWT, and messaging services.
+- Integrated EPOS, OAuth, JWT, and messaging services.
 - Developed back-end logic, request handling, file, and database operations.
 
 Full-Stack Developer
