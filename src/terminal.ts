@@ -29,7 +29,15 @@ $(function ($) {
     CV: {
       type: "dir",
       files: {
-        NICKWEBBER: {
+        AUTOCARE_TECHNICIAN: {
+          type: "file",
+          mime: "text/plain",
+          content: `
+TBC...
+
+          `,
+        },
+        SOFTWARE_ENGINEER: {
           type: "file",
           mime: "text/plain",
           content: `
